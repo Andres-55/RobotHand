@@ -1,4 +1,4 @@
-# Robotic Hand
+# Robot Hand
 
 ## Overview
 
@@ -63,7 +63,13 @@ I built the hand using cardboard and hot glue. I used this [YouTube video](https
 
 I made the top of the palm detachable so I could easily add the wire or change anything if needed. I also made the wrist into a pentagon shape so each side could hold a motor with one side being detatchable to easily work on the motors.
 
-(Add pictures of fingers, palm, and forearm)
+<img width="49%" alt="FrontHand" src="https://github.com/user-attachments/assets/175193a9-747a-4cec-bc8d-1b93d31a7226" /> 
+<img width="49%" alt="OpenPalm" src="https://github.com/user-attachments/assets/84042e1b-a3e7-4c84-b8ae-521abe08c86d" />
+
+<img width="39%" alt="BackHand" src="https://github.com/user-attachments/assets/f9a1451a-9fd5-4a9a-9fd6-709563d5ff90" />
+<img width="59%" alt="Inside" src="https://github.com/user-attachments/assets/6853697f-a455-479a-b0ab-373d7c8122d3" />
+
+<img width="90%" alt="Forearm" src="https://github.com/user-attachments/assets/c92fc71b-b223-4a79-9625-c0627eecabb8" />
 
 ## Solving the Servo Problems
 
@@ -73,7 +79,8 @@ At the time, I did not have a 3D printer, so I had to get creative and used a la
 
 This gave the servo enough pulling distance to fully curl the fingers.
 
-(Add picture of spool)
+<img width="50%" alt="Spool" src="https://github.com/user-attachments/assets/fb68e852-673e-41f5-bfc9-72d65aa914e7" />
+
 
 I then added rubber bands to pull the fingers back into an open position. This created another problem because the original servos were not strong enough to pull against the rubber bands.
 
@@ -81,7 +88,8 @@ I eventually replaced them with stronger 5V servos that were about three times a
 
 By this point, I had a 3D printer, so I designed and printed custom servo mounts. The mounts held the servos in place while still making it easy to add or remove the motors.
 
-(Add picture of motor inside the motor mount)
+<img width="47%" alt="MotorOut" src="https://github.com/user-attachments/assets/a92803e9-dbda-4bd1-9852-cc63578036d0" />
+<img width="52%" alt="MotorIn" src="https://github.com/user-attachments/assets/d796ee5b-f34c-4701-b784-8ee5e83c2623" />
 
 (Add files for motor mounts)
 
