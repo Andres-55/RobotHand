@@ -91,7 +91,7 @@ By this point, I had a 3D printer, so I designed and printed custom servo mounts
 <img width="47%" alt="MotorOut" src="https://github.com/user-attachments/assets/a92803e9-dbda-4bd1-9852-cc63578036d0" />
 <img width="52%" alt="MotorIn" src="https://github.com/user-attachments/assets/d796ee5b-f34c-4701-b784-8ee5e83c2623" />
 
-(Add files for motor mounts)
+Here are the [STL files](MotorMountObjects) for the motor mounts
 
 ## Final Result
 
