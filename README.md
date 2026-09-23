@@ -6,9 +6,7 @@ I originally started this project with the idea of controlling a robot arm by mi
 
 The final project uses a laptop camera to track my hand and control five servo motors on a robotic hand. The camera detects my fingers using Python, OpenCV, and MediaPipe. The calculated finger positions are sent to an Arduino through serial communication, which controls the servos.
 
-<p align="center">
-  <img alt="Project Setup" src="assets/images/ProjectSetup.jpg" width="80%" />
-</p>
+https://github.com/user-attachments/assets/ec4b08c5-9e10-4184-8056-761c9ff1205a
 
 ## How It Works
 
@@ -119,7 +117,9 @@ The final hand can track all five fingers using a laptop camera and move the cor
 
 The hand is built mostly from cardboard, with a couple of 3D-printed parts for the motor mounts. Some parts are detachable, which allows you to work on any part without having to disassemble anything.
 
-https://github.com/user-attachments/assets/ec4b08c5-9e10-4184-8056-761c9ff1205a
+<p align="center">
+  <img alt="Project Setup" src="assets/images/ProjectSetup.jpg" width="80%" />
+</p>
 
 ## What I Learned
 
