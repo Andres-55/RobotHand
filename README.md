@@ -7,7 +7,7 @@ I originally started this project with the idea of controlling a robot arm by mi
 The final project uses a laptop camera to track my hand and control five servo motors on a robotic hand. The camera detects my fingers using Python, OpenCV, and MediaPipe. The calculated finger positions are sent to an Arduino through serial communication, which controls the servos.
 
 <p align="center">
-  <img alt="Project Setup" src="https://github.com/user-attachments/assets/21d88383-4f43-4a4f-8bb9-583b951b2033" width="70%" />
+  <img alt="Project Setup" src="assets/images/ProjectSetup.jpg" width="80%" />
 </p>
 
 ## How It Works
@@ -58,7 +58,7 @@ To be safe I switched to a 5V 20A switching power supply but it would also be fi
 Here is how I wired my whole project. I cut the end of power cord and connected it to the power supply. Then I connected the power supply to the terminal block so that everything is in series. Then connect each motor to a positive and negative section on the terminal and connect the signal wire directly to the arduino. Just remember which motor each pin is connected to so it matches the arduino code. I also added 2 capacitors to the setup to handle any power spikes when operating
 
 <p align="center">
-  <img  alt="Wiring Setup" src="https://github.com/user-attachments/assets/b95e2b5d-4188-4db4-9e4e-b3751ee3e33f" width="70%" />
+  <img  alt="Wiring Setup" src="assets/images/WiringSetup.jpg" width="70%" />
 </p>
 
 ## Building the Hand
@@ -68,17 +68,17 @@ I built the hand using cardboard and hot glue. I used this [YouTube video](https
 I made the top of the palm detachable so I could easily add the wire or change anything if needed. I also made the wrist into a pentagon shape so each side could hold a motor with one side being detatchable to easily work on the motors.
 
 <p align="center">
-  <img width="47%" alt="FrontHand" src="https://github.com/user-attachments/assets/175193a9-747a-4cec-bc8d-1b93d31a7226" /> 
-  <img width="45%" alt="OpenPalm" src="https://github.com/user-attachments/assets/84042e1b-a3e7-4c84-b8ae-521abe08c86d" />
+  <img width="47%" alt="FrontHand" src="assets/images/FrontHand.jpg" /> 
+  <img width="45%" alt="OpenPalm" src="assets/images/OpenPalm.jpg" />
 </p>
 
 <p align="center">
-  <img width="35%" alt="BackHand" src="https://github.com/user-attachments/assets/f9a1451a-9fd5-4a9a-9fd6-709563d5ff90" />
-  <img width="52%" alt="Inside" src="https://github.com/user-attachments/assets/6853697f-a455-479a-b0ab-373d7c8122d3" />
+  <img width="35%" alt="BackHand" src="assets/images/BackHand.jpg" />
+  <img width="52%" alt="Inside" src="assets/images/Inside.jpg" />
 </p>
 
 <p align="center">
-  <img width="70%" alt="Forearm" src="https://github.com/user-attachments/assets/c92fc71b-b223-4a79-9625-c0627eecabb8" />
+  <img width="70%" alt="Forearm" src="assets/images/Forearm.jpg" />
 </p>
 
 ## Solving the Servo Problems
@@ -90,7 +90,7 @@ At the time, I did not have a 3D printer, so I had to get creative and used a la
 This gave the servo enough pulling distance to fully curl the fingers.
 
 <p align="center">
-  <img width="30%" alt="Spool" src="https://github.com/user-attachments/assets/fb68e852-673e-41f5-bfc9-72d65aa914e7" />
+  <img width="30%" alt="Spool" src="assets/images/Spool.jpg" />
 </p>
 
 
@@ -101,8 +101,8 @@ I eventually replaced them with stronger 5V servos that were about three times a
 By this point, I had a 3D printer, so I designed and printed custom servo mounts. The mounts held the servos in place while still making it easy to add or remove the motors.
 
 <p align="center">
-  <img width="42%" alt="MotorOut" src="https://github.com/user-attachments/assets/a92803e9-dbda-4bd1-9852-cc63578036d0" />
-  <img width="45%" alt="MotorIn" src="https://github.com/user-attachments/assets/d796ee5b-f34c-4701-b784-8ee5e83c2623" />
+  <img width="42%" alt="MotorOut" src="assets/images/MotorOut.jpg" />
+  <img width="45%" alt="MotorIn" src="assets/images/MotorIn.jpg" />
 </p>
 
 Here are the [STL files](MotorMountObjects) for the motor mounts
@@ -112,7 +112,6 @@ Here are the [STL files](MotorMountObjects) for the motor mounts
 The final hand can track all five fingers using a laptop camera and move the corresponding servos in real time.
 
 The hand is built mostly from cardboard, with a couple 3D printed parts for the motor mounts. Some parts are detatchable which allows you to work on any part without having to disassemble anything.
-
 
 https://github.com/user-attachments/assets/ec4b08c5-9e10-4184-8056-761c9ff1205a
 
