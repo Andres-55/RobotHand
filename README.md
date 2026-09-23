@@ -34,7 +34,7 @@ The Arduino receives the values and moves the five servos to match the movement 
 * Hot glue
 * Rubber Bands
 * Laptop webcam
-* 3D printed servo mounts
+* 3D-printed servo mounts
 * Python with OpenCV and MediaPipe
 
 ## Starting the Project
@@ -51,11 +51,17 @@ I calculated both the finger distance and the reference distance, then divided t
 
 ## Power Problems
 
-Once I started controlling multiple servos, I found a problem. The arduino by itself could not provide enough current for more than two motors at the same time.
+Once I started controlling multiple servos, I found a problem. The Arduino by itself could not provide enough current for more than two motors at the same time.
 
-To be safe I switched to a 5V 20A switching power supply but it would also be fine with 15A. I also needed a terminal block and capacitors to make the wiring easier to manage and keep up wth power spikes.
+To be safe, I switched to a 5V 20A switching power supply, but it would also be fine with 15A. I also needed a terminal block and capacitors to make the wiring easier to manage and keep up wth power spikes.
 
-Here is how I wired my whole project. I cut the end of power cord and connected it to the power supply. Then I connected the power supply to the terminal block so that everything is in series. Then connect each motor to a positive and negative section on the terminal and connect the signal wire directly to the arduino. Just remember which motor each pin is connected to so it matches the arduino code. I also added 2 capacitors to the setup to handle any power spikes when operating
+Here is how I wired my whole project:
+Cut the end of the power cord(without prongs) and connect it to the power supply. 
+Connect the power supply to the terminal block so that everything is in series.
+Connect each motor to a positive and negative section on the terminal block and connect the signal wire directly to the Arduino. 
+Just remember which motor each pin is connected to so it matches the Arduino code(ex: If the thumb motor is connected to pin 5, then attach the corresponding servo to pin 5)
+Connect the ground pin on the Arduino to a ground section on the terminal block
+I also added 2 capacitors to the setup to handle any power spikes when operating
 
 <p align="center">
   <img  alt="Wiring Setup" src="assets/images/WiringSetup.jpg" width="70%" />
@@ -63,9 +69,9 @@ Here is how I wired my whole project. I cut the end of power cord and connected 
 
 ## Building the Hand
 
-I built the hand using cardboard and hot glue. I used this [YouTube video](https://www.youtube.com/watch?v=GTH_Tzg1DmA&t=174s) to make the fingers but I needed to change the palm and forearm to accomodate the motors.
+I built the hand using cardboard and hot glue. I used this [YouTube video](https://www.youtube.com/watch?v=GTH_Tzg1DmA&t=174s) to make the fingers, but I needed to change the palm and forearm to accommodate the motors.
 
-I made the top of the palm detachable so I could easily add the wire or change anything if needed. I also made the wrist into a pentagon shape so each side could hold a motor with one side being detatchable to easily work on the motors.
+I made the top of the palm detachable so I could easily add the wire or change anything if needed. I also made the wrist into a pentagon shape so each side could hold a motor, with one side being detachable to easily work on the motors.
 
 <p align="center">
   <img width="47%" alt="FrontHand" src="assets/images/FrontHand.jpg" /> 
@@ -83,7 +89,7 @@ I made the top of the palm detachable so I could easily add the wire or change a
 
 ## Solving the Servo Problems
 
-The first problem with the servo motors were that the arms were too short to pull the fingers far enough.
+The first problem with the servo motors was that the arms were too short to pull the fingers far enough.
 
 At the time, I did not have a 3D printer, so I had to get creative and used a large bottle cap. I attached the bottle cap to the servo arm and used it as a larger spool for the fishing line. I also added hot glue around the cap to keep the line from slipping off.
 
@@ -96,7 +102,7 @@ This gave the servo enough pulling distance to fully curl the fingers.
 
 I then added rubber bands to pull the fingers back into an open position. This created another problem because the original servos were not strong enough to pull against the rubber bands.
 
-I eventually replaced them with stronger 5V servos that were about three times as strong. The new servos were strong enough to curl the fingers but they kept of pulling themselves out of the hole in the cardboard.
+I eventually replaced them with stronger 5V servos that were about three times as strong. The new servos were strong enough to curl the fingers, but they kept pulling themselves out of the hole in the cardboard.
 
 By this point, I had a 3D printer, so I designed and printed custom servo mounts. The mounts held the servos in place while still making it easy to add or remove the motors.
 
@@ -111,7 +117,7 @@ Here are the [STL files](MotorMountObjects) for the motor mounts
 
 The final hand can track all five fingers using a laptop camera and move the corresponding servos in real time.
 
-The hand is built mostly from cardboard, with a couple 3D printed parts for the motor mounts. Some parts are detatchable which allows you to work on any part without having to disassemble anything.
+The hand is built mostly from cardboard, with a couple of 3D-printed parts for the motor mounts. Some parts are detachable, which allows you to work on any part without having to disassemble anything.
 
 https://github.com/user-attachments/assets/ec4b08c5-9e10-4184-8056-761c9ff1205a
 
@@ -121,13 +127,13 @@ While this project presented a lot of new challenges to overcome, it has inspire
 
 One of the biggest things I learned was that the initial plan can change a lot. I actually started with EMG sensors, but the setup became too complicated and expensive, so I changed the project to use computer vision. I also had to redesign parts many times when the motors, power system, or cardboard structure did not work as expected.
 
-I learned that mechanical problems can be make or break the entire project. A small change like using a bottle cap as a spool on the motor allowed for the fingers to curl all the way.
+I learned that mechanical problems can make or break the entire project. A small change like using a bottle cap as a spool on the motor allowed the fingers to curl all the way.
 
-Most of the project was built by testing an idea, checking if it will work with the other parts, and changing the design until it worked. This process taught me more than simply following a project tutorial from beginning to end.
+Most of the project was built by testing an idea, checking if it would work with the other parts, and changing the design until it worked. This process taught me more than simply following a project tutorial from beginning to end.
 
 ## Future Improvements
 
-While the project works as I expected there are still a few things I would like to improve:
+While the project works as I expected, there are still a few things I would like to improve:
 
 * 3D print the fingers to reduce friction between the moving parts
 * Make the detachable forearm section more stable
@@ -143,4 +149,87 @@ The Python program uses:
 * NumPy
 * PySerial
 
-(Add steps for running software)
+## How to Set Up and Run the Program
+
+### 1. Clone the Repository 
+
+* Click on the green "Code" button at the top right and copy the URL
+* Open PyCharm and go to File -> Project from Version Control
+* Make sure you are in the Repository URL section
+* Then paste the URL into the box next to "URL"
+* Choose where you want to save it and click "Clone"
+
+### 2. Download Python
+* Make sure that you have Python installed on your computer
+* You can check by going to the bottom left and clicking on the terminal button
+* Then type:
+  ```
+  python --version
+  ```
+* into the terminal, and you should get a version number
+* If not, you can download it from python.org
+
+### 3. Create a Virtual Environment
+
+* In PyCharm, go to:
+* File -> settings -> Project -> Python Interpreter
+* Click "Add Interpreter" and select "Add Local Interpreter"
+* Choose Virtualenv for the type
+* For Base Python, choose Python 3.9.13
+* If it is not available, install Python 3.9.13 separately and select it as the Base Python
+* Click "Apply" and "Ok"
+* Open the PyCharm terminal and check that there is "(.venv)" at the beginning of the line
+* (You might need to open a new terminal)
+
+### 4. Install Libraries
+* Using the terminal, go to the Python folder(make sure you see "(.venv)" at the beginning of the line):
+```
+cd python
+```
+* Then install the required libraries:
+```
+python -m pip install -r requirements.txt
+```
+
+
+### 5. Connect the Arduino
+
+* Download the IDE from [here](https://docs.arduino.cc/software/ide/?_gl=1*1955iv4*_up*MQ..*_ga*MTE0NzkzODk2MC4xNzkwMTQwMzU2*_ga_NEXN8H46L5*czE3OTAxNDAzNTUkbzEkZzAkdDE3OTAxNDAzNTUkajYwJGwwJGg2NDk4NjA1MTM.)
+* Open the arduino/handMotors.ino file or copy and paste the code into a new file
+* Connect the Arduino to your computer with a USB cable
+* Select the correct Arduino board and COM port in the drop-down list in the top left
+* Upload the code to the Arduino by clicking on the right arrow button in the top left
+
+### 6. Check Serial Port
+
+* In the Arduino IDE, go to Tools -> Port
+* and check what port is being used (ex: "COM3")
+* If it does not match the code, update the line to match your COM port
+```python
+arduino = serial.Serial('COM3', 9600)
+```
+
+### 7. Run Program
+
+* Make sure the Arduino is still connected to your computer
+* Click on the green arrow at the top right to run the program
+* The camera should open and track your hand
+
+### Troubleshooting
+
+* If the camera does not open:
+* Make sure another application is not already using your camera
+* If it does not recognize "solution", make sure mediapipe version 0.10.x is installed by running:
+```
+python -c "import mediapipe as mp; print(mp.__version__)"
+```
+* If you have a different version, run: 
+```
+python -m pip uninstall mediapipe
+```
+* and confirm it. Then run:
+```
+python -m pip install mediapipe==0.10.21
+```
+* The software can be tested without the hand or motors being connected
+* Only an Arduino is required to be connected
